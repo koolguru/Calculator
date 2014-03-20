@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    class CalcFunctions
+    {
+        public void Calcfunctions()
+        {
+        }
+        public void Add(int number1, int number2)
+        {
+            int addedNumbers = number1 + number2;
+        }
+    }
+}
