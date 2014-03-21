@@ -1,6 +1,8 @@
 Main Development Plan
 =====================
 
+This is the general idea of where I want the project to go. If you want to code, please use the Development Plan to keep track of what you are doing.
+
 Classes
 =======
 - One main form class
