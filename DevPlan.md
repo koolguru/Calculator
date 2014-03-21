@@ -14,3 +14,14 @@ Issues
 ======
 - How will the program add more than two numbers
 - Form design must show all information being processed by the program 
+
+Progress
+========
+What I have done so far
+
+- Main form created
+- Number buttons added, functional
+- Textbox recieving number inputs
+- Equals button, non-functional
+- About Form (Complete)
+   - GitHub Repository link 
