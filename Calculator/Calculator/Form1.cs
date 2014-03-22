@@ -46,7 +46,6 @@ namespace Calculator
             }
 
         }
-
         private void twoButton_Click(object sender, EventArgs e)
         {
             outputBox.Text = outputBox.Text + twoButton.Text;
@@ -55,7 +54,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 2;
@@ -76,7 +74,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 3;
@@ -97,7 +94,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 4;
@@ -118,7 +114,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 5;
@@ -139,7 +134,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 6;
@@ -160,7 +154,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 7;
@@ -172,7 +165,6 @@ namespace Calculator
                 numberOneEntered = true;
             }
         }
-
         private void eightButton_Click(object sender, EventArgs e)
         {
             outputBox.Text = outputBox.Text + eightButton.Text;
@@ -181,7 +173,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 8;
@@ -202,7 +193,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 9;
@@ -223,7 +213,6 @@ namespace Calculator
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            outputBox.Text = outputBox.Text + oneButton.Text;
             if (numberOneEntered == true)
             {
                 numberTwo = 0;
