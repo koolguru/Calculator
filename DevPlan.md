@@ -27,3 +27,5 @@ What I have done so far
 - Equals button, non-functional
 - About Form (Complete)
    - GitHub Repository link 
+- Plus button is now functional for one digit numbers only
+   - Will require major restructuring for future updates
