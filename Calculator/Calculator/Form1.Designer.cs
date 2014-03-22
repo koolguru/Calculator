@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.outputBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.equalsButton = new System.Windows.Forms.Button();
             this.oneButton = new System.Windows.Forms.Button();
             this.sevenButton = new System.Windows.Forms.Button();
             this.sixButton = new System.Windows.Forms.Button();
@@ -58,14 +58,15 @@
             this.outputBox.Size = new System.Drawing.Size(276, 55);
             this.outputBox.TabIndex = 0;
             // 
-            // button1
+            // equalsButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "=";
-            this.button1.UseVisualStyleBackColor = true;
+            this.equalsButton.Location = new System.Drawing.Point(12, 12);
+            this.equalsButton.Name = "equalsButton";
+            this.equalsButton.Size = new System.Drawing.Size(75, 57);
+            this.equalsButton.TabIndex = 1;
+            this.equalsButton.Text = "=";
+            this.equalsButton.UseVisualStyleBackColor = true;
+            this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
             // 
             // oneButton
             // 
@@ -185,6 +186,7 @@
             this.plusButton.TabIndex = 13;
             this.plusButton.Text = "+";
             this.plusButton.UseVisualStyleBackColor = true;
+            this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
             // 
             // divideButton
             // 
@@ -233,7 +235,7 @@
             this.Controls.Add(this.sixButton);
             this.Controls.Add(this.sevenButton);
             this.Controls.Add(this.oneButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.equalsButton);
             this.Controls.Add(this.outputBox);
             this.Name = "CalculatorForm";
             this.Text = "Calculator";
@@ -245,7 +247,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox outputBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button equalsButton;
         private System.Windows.Forms.Button oneButton;
         private System.Windows.Forms.Button sevenButton;
         private System.Windows.Forms.Button sixButton;
