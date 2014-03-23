@@ -24,6 +24,7 @@ namespace Calculator
         public bool numberTwoEntered = false;
         public string output;
         public bool clearOutputBox = false;
+        public bool subtractButtonClicked = false;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -34,195 +35,97 @@ namespace Calculator
                 clearOutputBox = false;
             }
             outputBox.Text = outputBox.Text + oneButton.Text;
-            if (numberOneEntered == true)
-            {
-                numberTwo = 1;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 1;
-                numberOneEntered = true;
-            }
+
 
         }
         private void twoButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + twoButton.Text;
+
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 2;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 2;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + twoButton.Text;
         }
 
         private void threeButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + threeButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 3;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 3;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + threeButton.Text;
         }
 
         private void fourButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + fourButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 4;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 4;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + fourButton.Text;
         }
 
         private void fiveButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + fiveButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 5;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 5;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + fiveButton.Text;
         }
 
         private void sixButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + sixButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 6;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 6;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + sixButton.Text;
         }
 
         private void sevenButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + sevenButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 7;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 7;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + sevenButton.Text;
         }
         private void eightButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + eightButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 8;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 8;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + eightButton.Text;
         }
 
         private void nineButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + nineButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 9;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 9;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + nineButton.Text;
         }
 
         private void zeroButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + zeroButton.Text;
             if (clearOutputBox == true)
             {
                 outputBox.Clear();
                 clearOutputBox = false;
             }
-            if (numberOneEntered == true)
-            {
-                numberTwo = 0;
-                numberTwoEntered = true;
-            }
-            else if (numberOneEntered == false)
-            {
-                numberOne = 0;
-                numberOneEntered = true;
-            }
+            outputBox.Text = outputBox.Text + zeroButton.Text;
         }
 
         private void aboutForm_Click(object sender, EventArgs e)
@@ -233,27 +136,66 @@ namespace Calculator
 
         private void plusButton_Click(object sender, EventArgs e)
         {
-            outputBox.Text = outputBox.Text + " + ";
             plusButtonClicked = true;
+            if (numberOneEntered == false)
+            {
+                numberOne = Convert.ToInt32(outputBox.Text);
+                numberOneEntered = true;
+            }
+            clearOutputBox = true;
+            outputBox.Clear();
         }
 
         private void equalsButton_Click(object sender, EventArgs e)
         {
             clearOutputBox = true;
+
             if (plusButtonClicked == true)
             {
-                if ((numberOneEntered == true) || (numberTwoEntered == true))
+                if ((numberOneEntered == true))
                 {
-                    output = Convert.ToString(numberOne + numberTwo);
-                    outputBox.Text = output;
+                    numberTwo = Convert.ToInt32(outputBox.Text); //Convert Output text to integer number
+                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    output = Convert.ToString(numberOne + numberTwo); //Add the numbers
+                    outputBox.Text = output; //display the output
                     numberOneEntered = false;
                     numberTwoEntered = false;
                 }
                 else
                 {
                     outputBox.Text = "Error";
+                    clearOutputBox = true;
                 }
             }
+            if (subtractButtonClicked == true)
+            {
+                if ((numberOneEntered == true))
+                {
+                    numberTwo = Convert.ToInt32(outputBox.Text); //Convert Output text to integer number
+                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    output = Convert.ToString(numberOne - numberTwo); //Add the numbers
+                    outputBox.Text = output; //display the output
+                    numberOneEntered = false;
+                    numberTwoEntered = false;
+                }
+                else
+                {
+                    outputBox.Text = "Error";
+                    clearOutputBox = true;
+                }
+            }
+        }
+
+        private void minusButton_Click(object sender, EventArgs e)
+        {
+            subtractButtonClicked = true;
+            if (numberOneEntered == false)
+            {
+                numberOne = Convert.ToInt32(outputBox.Text);
+                numberOneEntered = true;
+            }
+            clearOutputBox = true;
+            outputBox.Clear();
         }
     }
 }

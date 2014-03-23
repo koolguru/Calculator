@@ -214,6 +214,7 @@
             this.minusButton.TabIndex = 16;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = true;
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // CalculatorForm
             // 
