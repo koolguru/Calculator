@@ -158,7 +158,7 @@ namespace Calculator
                 if ((numberOneEntered == true))
                 {
                     numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
-                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    numberTwoEntered = true; 
                     output = Convert.ToString(numberOne + numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
                     numberOneEntered = false;
@@ -175,7 +175,7 @@ namespace Calculator
                 if ((numberOneEntered == true))
                 {
                     numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
-                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    numberTwoEntered = true; 
                     output = Convert.ToString(numberOne - numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
                     numberOneEntered = false;
@@ -192,7 +192,7 @@ namespace Calculator
                 if ((numberOneEntered == true))
                 {
                     numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
-                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    numberTwoEntered = true; 
                     output = Convert.ToString(numberOne * numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
                     numberOneEntered = false;
@@ -209,7 +209,7 @@ namespace Calculator
                 if ((numberOneEntered == true))
                 {
                     numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
-                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    numberTwoEntered = true; 
                     output = Convert.ToString(numberOne / numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
                     numberOneEntered = false;
