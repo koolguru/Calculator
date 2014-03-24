@@ -46,6 +46,9 @@
             this.multiplyButton = new System.Windows.Forms.Button();
             this.minusButton = new System.Windows.Forms.Button();
             this.decimalButton = new System.Windows.Forms.Button();
+            this.memMinus = new System.Windows.Forms.Button();
+            this.memPlus = new System.Windows.Forms.Button();
+            this.memRecall = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // outputBox
@@ -246,11 +249,44 @@
             this.decimalButton.UseVisualStyleBackColor = true;
             this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
             // 
+            // memMinus
+            // 
+            this.memMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memMinus.Location = new System.Drawing.Point(12, 140);
+            this.memMinus.Name = "memMinus";
+            this.memMinus.Size = new System.Drawing.Size(75, 55);
+            this.memMinus.TabIndex = 18;
+            this.memMinus.Text = "M-";
+            this.memMinus.UseVisualStyleBackColor = true;
+            // 
+            // memPlus
+            // 
+            this.memPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memPlus.Location = new System.Drawing.Point(12, 79);
+            this.memPlus.Name = "memPlus";
+            this.memPlus.Size = new System.Drawing.Size(75, 55);
+            this.memPlus.TabIndex = 19;
+            this.memPlus.Text = "M+";
+            this.memPlus.UseVisualStyleBackColor = true;
+            // 
+            // memRecall
+            // 
+            this.memRecall.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memRecall.Location = new System.Drawing.Point(12, 201);
+            this.memRecall.Name = "memRecall";
+            this.memRecall.Size = new System.Drawing.Size(75, 55);
+            this.memRecall.TabIndex = 20;
+            this.memRecall.Text = "MR";
+            this.memRecall.UseVisualStyleBackColor = true;
+            // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 336);
+            this.Controls.Add(this.memRecall);
+            this.Controls.Add(this.memPlus);
+            this.Controls.Add(this.memMinus);
             this.Controls.Add(this.decimalButton);
             this.Controls.Add(this.minusButton);
             this.Controls.Add(this.multiplyButton);
@@ -269,6 +305,8 @@
             this.Controls.Add(this.oneButton);
             this.Controls.Add(this.equalsButton);
             this.Controls.Add(this.outputBox);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.MaximizeBox = false;
             this.Name = "CalculatorForm";
             this.Text = "Calculator";
             this.ResumeLayout(false);
@@ -296,6 +334,9 @@
         private System.Windows.Forms.Button multiplyButton;
         private System.Windows.Forms.Button minusButton;
         private System.Windows.Forms.Button decimalButton;
+        private System.Windows.Forms.Button memMinus;
+        private System.Windows.Forms.Button memPlus;
+        private System.Windows.Forms.Button memRecall;
     }
 }
 
