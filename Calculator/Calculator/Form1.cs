@@ -17,14 +17,17 @@ namespace Calculator
             InitializeComponent();
         }
         //Class Level Variables
-        public int numberOne;
-        public int numberTwo;
+        public double numberOne;
+        public double numberTwo;
         public bool plusButtonClicked = false;
         public bool numberOneEntered = false;
         public bool numberTwoEntered = false;
         public string output;
         public bool clearOutputBox = false;
         public bool subtractButtonClicked = false;
+        public bool multiplyButtonClicked = false;
+        public bool divideButtonClicked = false;
+        public bool decimalButtonClicked = false;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -139,7 +142,7 @@ namespace Calculator
             plusButtonClicked = true;
             if (numberOneEntered == false)
             {
-                numberOne = Convert.ToInt32(outputBox.Text);
+                numberOne = Convert.ToDouble(outputBox.Text);
                 numberOneEntered = true;
             }
             clearOutputBox = true;
@@ -154,7 +157,7 @@ namespace Calculator
             {
                 if ((numberOneEntered == true))
                 {
-                    numberTwo = Convert.ToInt32(outputBox.Text); //Convert Output text to integer number
+                    numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
                     numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
                     output = Convert.ToString(numberOne + numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
@@ -171,9 +174,43 @@ namespace Calculator
             {
                 if ((numberOneEntered == true))
                 {
-                    numberTwo = Convert.ToInt32(outputBox.Text); //Convert Output text to integer number
+                    numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
                     numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
                     output = Convert.ToString(numberOne - numberTwo); //Add the numbers
+                    outputBox.Text = output; //display the output
+                    numberOneEntered = false;
+                    numberTwoEntered = false;
+                }
+                else
+                {
+                    outputBox.Text = "Error";
+                    clearOutputBox = true;
+                }
+            }
+            if (multiplyButtonClicked == true)
+            {
+                if ((numberOneEntered == true))
+                {
+                    numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
+                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    output = Convert.ToString(numberOne * numberTwo); //Add the numbers
+                    outputBox.Text = output; //display the output
+                    numberOneEntered = false;
+                    numberTwoEntered = false;
+                }
+                else
+                {
+                    outputBox.Text = "Error";
+                    clearOutputBox = true;
+                }
+            }
+            if (divideButtonClicked == true)
+            {
+                if ((numberOneEntered == true))
+                {
+                    numberTwo = Convert.ToDouble(outputBox.Text); //Convert Output text to integer number
+                    numberTwoEntered = true; //What the beans is this shizt doing here//Fuck you im not taking it out//Go Suck a bean//Go egg a suck//what?//
+                    output = Convert.ToString(numberOne / numberTwo); //Add the numbers
                     outputBox.Text = output; //display the output
                     numberOneEntered = false;
                     numberTwoEntered = false;
@@ -191,11 +228,50 @@ namespace Calculator
             subtractButtonClicked = true;
             if (numberOneEntered == false)
             {
-                numberOne = Convert.ToInt32(outputBox.Text);
+                numberOne = Convert.ToDouble(outputBox.Text);
                 numberOneEntered = true;
             }
             clearOutputBox = true;
             outputBox.Clear();
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            multiplyButtonClicked = true;
+            if (numberOneEntered == false)
+            {
+                numberOne = Convert.ToDouble(outputBox.Text);
+                numberOneEntered = true;
+            }
+            clearOutputBox = true;
+            outputBox.Clear();
+        }
+
+        private void divideButton_Click(object sender, EventArgs e)
+        {
+            divideButtonClicked = true;
+            if (numberOneEntered == false)
+            {
+                numberOne = Convert.ToDouble(outputBox.Text);
+                numberOneEntered = true;
+            }
+            clearOutputBox = true;
+            outputBox.Clear();
+        }
+
+        private void decimalButton_Click(object sender, EventArgs e)
+        {
+            if (outputBox.Text == "")
+            {
+                outputBox.Text = "0";
+            }
+            if (clearOutputBox == true)
+            {
+                outputBox.Clear();
+                clearOutputBox = false;
+                outputBox.Text = "0"; //Adds zero if pressed before number entered
+            }
+            outputBox.Text = outputBox.Text + decimalButton.Text;
         }
     }
 }
