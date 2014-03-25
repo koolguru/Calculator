@@ -28,6 +28,7 @@ namespace Calculator
         public bool multiplyButtonClicked = false;
         public bool divideButtonClicked = false;
         public bool decimalButtonClicked = false;
+        public double Memory = 0;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -272,6 +273,26 @@ namespace Calculator
                 outputBox.Text = "0"; //Adds zero if pressed before number entered
             }
             outputBox.Text = outputBox.Text + decimalButton.Text;
+        }
+
+        private void memPlus_Click(object sender, EventArgs e)
+        {
+            Memory = Convert.ToDouble(outputBox.Text);
+        }
+
+        private void memMinus_Click(object sender, EventArgs e)
+        {
+            Memory = 0;
+        }
+
+        private void memRecall_Click(object sender, EventArgs e)
+        {
+            if (clearOutputBox == true)
+            {
+                outputBox.Clear();
+                clearOutputBox = false;
+            }
+            outputBox.Text = outputBox.Text + Convert.ToString(Memory);
         }
     }
 }

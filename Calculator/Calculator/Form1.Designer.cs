@@ -258,6 +258,7 @@
             this.memMinus.TabIndex = 18;
             this.memMinus.Text = "M-";
             this.memMinus.UseVisualStyleBackColor = true;
+            this.memMinus.Click += new System.EventHandler(this.memMinus_Click);
             // 
             // memPlus
             // 
@@ -268,6 +269,7 @@
             this.memPlus.TabIndex = 19;
             this.memPlus.Text = "M+";
             this.memPlus.UseVisualStyleBackColor = true;
+            this.memPlus.Click += new System.EventHandler(this.memPlus_Click);
             // 
             // memRecall
             // 
@@ -278,6 +280,7 @@
             this.memRecall.TabIndex = 20;
             this.memRecall.Text = "MR";
             this.memRecall.UseVisualStyleBackColor = true;
+            this.memRecall.Click += new System.EventHandler(this.memRecall_Click);
             // 
             // CalculatorForm
             // 
