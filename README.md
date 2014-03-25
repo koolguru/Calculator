@@ -4,6 +4,10 @@ Created by Jay Tayade
 
 A Fully featured calculator made in C#
 
+<p align="center">
+  <img src="GoodBeanoStuff.PNG" alt="Screenshot"/>
+</p>
+
 Contributing
 ============
 
