@@ -8,6 +8,8 @@ A Fully featured calculator made in C#
   <img src="GoodBeanoStuff.PNG" alt="Screenshot"/>
 </p>
 
+This is a real screenshot of what I have done so far. 
+
 Contributing
 ============
 
