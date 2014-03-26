@@ -16,7 +16,7 @@ namespace Calculator
         {
             InitializeComponent();
         }
-        //Class Level Variables
+        //Class Level Variables//Consider changing access modifiers//
         public double numberOne;
         public double numberTwo;
         public bool plusButtonClicked = false;
